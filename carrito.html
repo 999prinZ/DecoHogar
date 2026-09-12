@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito | DecoHogar</title>
+    <link rel="stylesheet" href="assets/stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <h1>DecoHogar</h1>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="carrito.html">Carrito</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="acceso">
+            <span id="saludo"></span>
+            <a href="login.html" id="enlace-login">Iniciar sesion</a>
+            <a href="registro.html" id="enlace-registro">Registrarse</a>
+            <button type="button" id="cerrar-sesion" hidden>Cerrar sesion</button>
+        </div>
+
+        <section class="carrito">
+            <h2>Mi carrito</h2>
+            <p id="aviso-carrito" role="status"></p>
+            <p id="carrito-vacio">Tu carrito esta vacio.</p>
+            <div class="contenido-carrito">
+                <div id="productos-carrito"></div>
+                <aside class="resumen-carrito">
+                    <h3>Resumen</h3>
+                    <p>Unidades: <span id="unidades-carrito">0</span></p>
+                    <p class="total-carrito">Total: <span id="total-carrito">$0</span></p>
+                    <button type="button" id="vaciar-carrito" disabled>Vaciar carrito</button>
+                    <a class="boton" href="productos.html">Seguir comprando</a>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer_links">
+            <a href="index.html">Inicio</a>
+            <a href="login.html">Login</a>
+            <a href="registro.html">Registrarse</a>
+        </div>
+
+        <p>Atencion: lunes a domingo de 10:00 a 15:00.(si, somos flojos)</p>
+        <p>2026 DecoHogar.</p>
+    </footer>
+
+    <script src="assets/comun.js"></script>
+    <script src="assets/carrito.js"></script>
+</body>
+</html>

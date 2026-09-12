@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | DecoHogar</title>
+    <link rel="stylesheet" href="assets/stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <h1>DecoHogar</h1>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="carrito.html">Carrito</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="acceso">
+            <span id="saludo"></span>
+            <a href="login.html" id="enlace-login">Iniciar sesion</a>
+            <a href="registro.html" id="enlace-registro">Registrarse</a>
+            <button type="button" id="cerrar-sesion" hidden>Cerrar sesion</button>
+        </div>
+
+        <section class="registro">
+            <h2>Registro de usuario</h2>
+
+            <form id="formulario-registro" novalidate>
+                <div class="campo">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" maxlength="100" autocomplete="name" required>
+                    <small id="error-nombre" class="error"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electronico</label>
+                    <input type="email" id="correo" name="correo" placeholder="nombre@duoc.cl" autocomplete="email" required>
+                    <small>Utiliza tu correo terminado en @duoc.cl.</small>
+                    <small id="error-correo" class="error"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="contrasena">Contrasena</label>
+                    <input type="password" id="contrasena" name="contrasena" minlength="10" autocomplete="new-password" required>
+                    <small>Minimo 10 caracteres, una mayuscula, un numero y un simbolo de estos: $ % &amp; / *</small>
+                    <small id="error-contrasena" class="error"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="confirmar-contrasena">Confirmar contrasena</label>
+                    <input type="password" id="confirmar-contrasena" name="confirmar-contrasena" minlength="10" autocomplete="new-password" required>
+                    <small id="error-confirmar-contrasena" class="error"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">Telefono (opcional)</label>
+                    <input type="tel" id="telefono" name="telefono" autocomplete="tel">
+                </div>
+
+                <fieldset class="preferencias">
+                    <legend>Estilos de preferencia</legend>
+                    <p>Selecciona al menos uno.</p>
+
+                    <div class="opcion-estilo">
+                        <input type="checkbox" id="minimalista" name="estilos" value="Minimalista">
+                        <label for="minimalista">Minimalista</label>
+                    </div>
+
+                    <div class="opcion-estilo">
+                        <input type="checkbox" id="industrial" name="estilos" value="Industrial">
+                        <label for="industrial">Industrial</label>
+                    </div>
+
+                    <div class="opcion-estilo">
+                        <input type="checkbox" id="nordico" name="estilos" value="Nordico">
+                        <label for="nordico">Nordico</label>
+                    </div>
+
+                    <div class="opcion-estilo">
+                        <input type="checkbox" id="vintage" name="estilos" value="Vintage">
+                        <label for="vintage">Vintage</label>
+                    </div>
+
+                    <div class="opcion-estilo">
+                        <input type="checkbox" id="rustico" name="estilos" value="Rustico">
+                        <label for="rustico">Rustico</label>
+                    </div>
+
+                    <div class="opcion-estilo">
+                        <input type="checkbox" id="moderno" name="estilos" value="Moderno">
+                        <label for="moderno">Moderno</label>
+                    </div>
+
+                    <small id="error-estilos" class="error"></small>
+                </fieldset>
+
+                <section class="direcciones">
+                    <h3>Direcciones de envio</h3>
+                    <p>Registra al menos una direccion.</p>
+
+                    <div id="lista-direcciones">
+                        <fieldset class="direccion">
+                            <legend>Direccion 1</legend>
+
+                            <div class="campo">
+                                <label for="alias-1">Alias (opcional)</label>
+                                <input type="text" id="alias-1" name="alias-1" class="alias" maxlength="20" placeholder="Casa o Trabajo">
+                            </div>
+
+                            <div class="campo">
+                                <label for="calle-1">Direccion</label>
+                                <input type="text" id="calle-1" name="calle-1" class="calle" minlength="10" placeholder="Calle, numero y departamento" required>
+                            </div>
+
+                            <div class="campo">
+                                <label for="comuna-1">Comuna</label>
+                                <select id="comuna-1" name="comuna-1" class="comuna" required>
+                                    <option value="">Selecciona una comuna</option>
+                                    <option value="Santiago">Santiago</option>
+                                    <option value="Providencia">Providencia</option>
+                                    <option value="Maipu">Maipu</option>
+                                    <option value="La Florida">La Florida</option>
+                                    <option value="Puente Alto">Puente Alto</option>
+                                </select>
+                            </div>
+
+                            <small class="error error-direccion"></small>
+
+                            <button type="button" class="eliminar-direccion">
+                                Eliminar direccion
+                            </button>
+                        </fieldset>
+                    </div>
+
+                    <button type="button" id="agregar-direccion">Agregar otra direccion</button>
+
+                    <small id="error-direcciones" class="error"></small>
+                </section>
+
+                <button type="submit" id="boton-registro">Crear cuenta</button>
+
+                <p id="mensaje-registro" role="status"></p>
+                <p>Ya tienes cuenta? <a href="login.html">Inicia sesion</a></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer_links">
+            <a href="index.html">Inicio</a>
+            <a href="login.html">Login</a>
+            <a href="registro.html">Registrarse</a>
+        </div>
+
+        <p>Atencion: lunes a domingo de 10:00 a 15:00. (Si, somos flojos).</p>
+        <p>2026 DecoHogar.</p>
+    </footer>
+
+    <script src="assets/comun.js"></script>
+    <script src="assets/registro.js"></script>
+</body>
+</html>

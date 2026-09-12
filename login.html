@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | DecoHogar</title>
+    <link rel="stylesheet" href="assets/stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <h1>DecoHogar</h1>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="carrito.html">Carrito</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="acceso">
+            <span id="saludo"></span>
+            <a href="login.html" id="enlace-login">Iniciar sesion</a>
+            <a href="registro.html" id="enlace-registro">Registrarse</a>
+            <button type="button" id="cerrar-sesion" hidden>Cerrar sesion</button>
+        </div>
+
+        <section class="registro">
+            <h2>Iniciar sesion</h2>
+
+            <form id="formulario-login" novalidate>
+                <div class="campo">
+                    <label for="correo">Correo electronico</label>
+                    <input type="email" id="correo" name="correo" autocomplete="email" required>
+                    <small class="error" id="error-correo"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="contrasena">Contrasena</label>
+                    <input type="password" id="contrasena" name="contrasena" autocomplete="current-password" required>
+                    <small class="error" id="error-contrasena"></small>
+                </div>
+
+                <button type="submit">Iniciar sesion</button>
+                <p id="mensaje-login" role="status"></p>
+                <p><a href="registro.html">Crear cuenta</a></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer_links">
+            <a href="index.html">Inicio</a>
+            <a href="login.html">Login</a>
+            <a href="registro.html">Registrarse</a>
+        </div>
+
+        <p>Atencion: lunes a domingo de 10:00 a 15:00.(si, somos flojos)</p>
+        <p>2026 DecoHogar.</p>
+    </footer>
+
+    <script src="assets/comun.js"></script>
+    <script src="assets/login.js"></script>
+</body>
+</html>
